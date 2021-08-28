@@ -42,10 +42,18 @@
     rungame()
 
     function rungame(){
-        setTimeout(function(){changeword1(words[3*r-3].word,words[3*r-3].num)},3000)
-        setTimeout(resetword1,7000);
-        setTimeout(function(){changeword1(words[3*r-2].word,words[3*r-2].num)},9000)
-        setTimeout(function(){changeword1(words[3*r-1].word,words[3*r-1].num)},11000)
+        setTimeout(function(){changeword1(words[3*r-3].word,words[3*r-3].num)},1000)
+        // setTimeout(resetword1,7000);
+        setTimeout(function(){resetword1(words[3*r-3].num)},4000)
+
+
+        setTimeout(function(){changeword1(words[3*r-2].word,words[3*r-2].num)},5000)
+        setTimeout(function(){resetword1(words[3*r-2].num)},7000)
+
+
+        setTimeout(function(){changeword1(words[3*r-1].word,words[3*r-1].num)},9000)
+        setTimeout(function(){resetword1(words[3*r-1].num)},11000)
+
     }
 
     function nextRound(){
@@ -58,8 +66,8 @@
         document.getElementById(number).innerText = word1
     }
 
-    function resetword1() {
-        document.getElementById("1").innerText = "?"
+    function resetword1(number) {
+        document.getElementById(number).innerText = "?"
     }
 
 </script>
