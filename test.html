@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+            width: 100px;
+            height:100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="1" class="grid"  style="display: inline-block;">?</p>
+        <p id="2" class="grid" style="display: inline-block;">?</p>
+        <p id="3" class="grid" style="display: inline-block;">?</p>
+    </div>
+    <div>
+        <p id="4" class="grid"  style="display: inline-block;">?</p>
+        <p id="5" class="grid" style="display: inline-block;">?</p>
+        <p id="6" class="grid" style="display: inline-block;">?</p>
+    </div>
+
+    <div>
+        <p id="7" class="grid"  style="display: inline-block;">?</p>
+        <p id="8" class="grid" style="display: inline-block;">?</p>
+        <p id="9" class="grid" style="display: inline-block;">?</p>
+    </div>
+<script>
+    var words= [{word:"哈",num:"1"},{word:"哼",num:"2"},{word:"他",num:"3"}]
+
+    setTimeout(function(){changeword1(words[0].word,words[0].num)},3000)
+    setTimeout(resetword1,7000);
+    setTimeout(function(){changeword1(words[1].word,words[1].num)},9000)
+    setTimeout(function(){changeword1(words[2].word,words[2].num)},11000)
+
+
+    function changeword1(word1,number) {
+        document.getElementById(number).innerText = word1
+    }
+
+    function resetword1() {
+        document.getElementById("1").innerText = "?"
+    }
+
+</script>
+    <!-- <div id="1">我</div>
+    <div id="2">你</div>
+    <div id="3">她</div> -->
+</body>
+</html>
