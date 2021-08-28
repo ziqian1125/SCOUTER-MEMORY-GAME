@@ -31,12 +31,25 @@
         <p id="9" class="grid" style="display: inline-block;">?</p>
     </div>
 <script>
-    var words= [{word:"哈",num:"1"},{word:"哼",num:"2"},{word:"他",num:"3"}]
+    var words= [{word:"哈",num:"9"},{word:"哼",num:"4"},{word:"他",num:"3"},
+                {word:"没",num:"1"},{word:"美",num:"5"},{word:"每",num:"6"},
+    ]
+    // var num=[1,2,3]
 
-    setTimeout(function(){changeword1(words[0].word,words[0].num)},3000)
-    setTimeout(resetword1,7000);
-    setTimeout(function(){changeword1(words[1].word,words[1].num)},9000)
-    setTimeout(function(){changeword1(words[2].word,words[2].num)},11000)
+    var r = 2
+
+    if(r==1){
+        rungame()
+    }else if(r==2){
+        rungame()
+    }
+
+    function rungame(){
+        setTimeout(function(){changeword1(words[3*r-3].word,words[3*r-3].num)},3000)
+        setTimeout(resetword1,7000);
+        setTimeout(function(){changeword1(words[3*r-2].word,words[3*r-2].num)},9000)
+        setTimeout(function(){changeword1(words[3*r-1].word,words[3*r-1].num)},11000)
+    }
 
 
     function changeword1(word1,number) {
