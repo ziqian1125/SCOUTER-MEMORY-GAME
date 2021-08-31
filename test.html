@@ -9,29 +9,41 @@
         .grid{
             width: 100px;
             height:100px;
-            background-color: pink;
+            background-color:#F6D9BD;
+            border:4px solid #8B6447;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 0 auto;
+            border-bottom: 0px;
+        }
+
+        .middle{
+            text-align: center;
+            line-height: 100px;
         }
     </style>
 </head>
 <body>
-    <div>
-        <p id="1" class="grid"  style="display: inline-block;">?</p>
-        <p id="2" class="grid" style="display: inline-block;">?</p>
-        <p id="3" class="grid" style="display: inline-block;">?</p>
-    </div>
-    <div>
-        <p id="4" class="grid"  style="display: inline-block;">?</p>
-        <p id="5" class="grid" style="display: inline-block;">?</p>
-        <p id="6" class="grid" style="display: inline-block;">?</p>
+    <div style="margin-left:30px;margin-top:30px;">
+        <div >
+            <p id="1" class="grid middle"  style="display: inline-block;">?</p>
+            <p id="2" class="grid middle" style="display: inline-block;margin-left:-10px;">?</p>
+            <p id="3" class="grid middle" style="display: inline-block;margin-left: -10px;">?</p>
+        </div>
+        <div>
+            <p id="4" class="grid middle"  style="display: inline-block;">?</p>
+            <p id="5" class="grid middle" style="display: inline-block;margin-left:-10px;">?</p>
+            <p id="6" class="grid middle" style="display: inline-block;margin-left: -10px;">?</p>
+        </div>
+        <div>
+            <p id="7" class="grid middle"  style="display: inline-block;border-bottom:4px solid #8B6447;">?</p>
+            <p id="8" class="grid middle" style="display: inline-block;margin-left: -10px;border-bottom:4px solid #8B6447;">?</p>
+            <p id="9" class="grid middle" style="display: inline-block;margin-left: -10px;border-bottom:4px solid #8B6447;">?</p>
+        </div>
+        <button onclick="nextRound()" style="margin-top:50px;">next round</button>
+
     </div>
 
-    <div>
-        <p id="7" class="grid"  style="display: inline-block;">?</p>
-        <p id="8" class="grid" style="display: inline-block;">?</p>
-        <p id="9" class="grid" style="display: inline-block;">?</p>
-    </div>
-
-    <button onclick="nextRound()">下一轮</button>
 
 <script>
     var words= [{word:"哈",num:"9"},{word:"哼",num:"4"},{word:"他",num:"3"},
