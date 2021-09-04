@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
     <title>Document</title>
     <style>
         .grid{
@@ -24,27 +31,42 @@
     </style>
 </head>
 <body>
-    <div style="margin-left:30px;margin-top:30px;">
-        <div >
-            <p id="1" class="grid middle"  style="display: inline-block;">?</p>
-            <p id="2" class="grid middle" style="display: inline-block;margin-left:-10px;">?</p>
-            <p id="3" class="grid middle" style="display: inline-block;margin-left: -10px;">?</p>
-        </div>
-        <div>
-            <p id="4" class="grid middle"  style="display: inline-block;">?</p>
-            <p id="5" class="grid middle" style="display: inline-block;margin-left:-10px;">?</p>
-            <p id="6" class="grid middle" style="display: inline-block;margin-left: -10px;">?</p>
-        </div>
-        <div>
-            <p id="7" class="grid middle"  style="display: inline-block;border-bottom:4px solid #8B6447;">?</p>
-            <p id="8" class="grid middle" style="display: inline-block;margin-left: -10px;border-bottom:4px solid #8B6447;">?</p>
-            <p id="9" class="grid middle" style="display: inline-block;margin-left: -10px;border-bottom:4px solid #8B6447;">?</p>
-        </div>
-        <button onclick="nextRound()" style="margin-top:50px;">next round</button>
-
-    </div>
 
 
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <!-- 1 of 2 -->
+            <div style="margin-left:30px;margin-top:230px;">
+                <div >
+                    <p id="1" class="grid middle"  style="display: inline-block;">？</p>
+                    <p id="2" class="grid middle" style="display: inline-block;margin-left:-10px;">?</p>
+                    <p id="3" class="grid middle" style="display: inline-block;margin-left: -10px;">?</p>
+                </div>
+                <div>
+                    <p id="4" class="grid middle"  style="display: inline-block;">?</p>
+                    <p id="5" class="grid middle" style="display: inline-block;margin-left:-10px;">?</p>
+                    <p id="6" class="grid middle" style="display: inline-block;margin-left: -10px;">?</p>
+                </div>
+                <div>
+                    <p id="7" class="grid middle"  style="display: inline-block;border-bottom:4px solid #8B6447;">?</p>
+                    <p id="8" class="grid middle" style="display: inline-block;margin-left: -10px;border-bottom:4px solid #8B6447;">?</p>
+                    <p id="9" class="grid middle" style="display: inline-block;margin-left: -10px;border-bottom:4px solid #8B6447;">?</p>
+                </div>
+                <button onclick="nextRound()" style="margin-top:50px;">next round</button>
+        
+            </div> 
+          </div>
+          <div class="col">
+            2 of 2
+          </div>
+        </div>
+      </div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 <script>
     var words= [{word:"哈",num:"9"},{word:"哼",num:"4"},{word:"他",num:"3"},
                 {word:"没",num:"1"},{word:"美",num:"5"},{word:"每",num:"6"},
