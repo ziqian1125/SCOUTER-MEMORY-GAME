@@ -23,7 +23,10 @@ function copyText(cv){
 
     var dataImg = new Image()
     dataImg.src = cv.toDataURL('image/png')
-    document.body.appendChild(dataImg) 
+
+    leftdiv.appendChild(dataImg) 
+
+    // document.body.appendChild(dataImg) 
 }
 
 cv.crossOrigin = 'anonymous'

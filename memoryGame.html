@@ -14,14 +14,31 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="memoryGame.css">
 
+    <style>
+        img{
+            width: 60px;
+            height: 60px;
+            border: 1px solid;
+            margin: 15px;
+            margin-top: 60px;
+
+        }
+
+        /* .submitbutton{
+            background-color:#8B6447;
+            border-color:#8B6447 ;
+            margin-top: 50px;
+        } */
+    </style>
+
 </head>
 <body>
-    <div style="text-align:center;font-size: 30px;margin-bottom: 100px;margin-top: 50px;">level 1</div>
+    <div style="text-align:center;font-size: 30px;margin-bottom: 50px;margin-top: 50px;">level 1</div>
     <div class="container">
         <div class="row">
-          <div class="col"  id="left">
+          <div class="col"  id="left" style="margin-left: 100px;">
             <!-- left parts-->
-            <div style="margin-left:30px;">
+            <div >
                 <div >
                     <p id="1" class="grid middle"  style="display: inline-block;">？</p>
                     <p id="2" class="grid middle" style="display: inline-block;margin-left:-10px;">?</p>
@@ -41,12 +58,19 @@
         
             </div> 
           </div>
-          <div class="col right" >
+          <div class="col right"  style="text-align: center;">
             <!-- right parts-->
-            <canvas id="cv" width="300px" height="300px" style="border:1px solid #333;">
+            <canvas id="cv" width="400px" height="400px" style="border:1px solid #333;">
                 不支持canvas的浏览器
             </canvas>
-            <div><button onclick="copyText(cv)">submit</button></div>
+            <div  style="margin:0 auto;text-align: center;">
+                <!-- <button onclick="copyText(cv)">submit</button> -->
+
+                <button type="button" class="btn btn-primary"  onclick="copyText(cv)"  style="background-color:#8B6447;border-color:#8B6447 ;;margin-top: 50px;"> 
+                    Submit
+                </button>
+
+            </div>
         </div>
         </div>
       </div>
