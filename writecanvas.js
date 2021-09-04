@@ -30,3 +30,8 @@ function copyText(cv){
 }
 
 cv.crossOrigin = 'anonymous'
+
+function clearCanvas(cv){
+    ctx.clearRect(0,0,cv.width,cv.height)
+    ctx.beginPath()
+}
