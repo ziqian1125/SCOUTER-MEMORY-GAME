@@ -12,32 +12,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <title>Document</title>
-    <style>
-        .grid{
-            width: 100px;
-            height:100px;
-            background-color:#F6D9BD;
-            border:4px solid #8B6447;
-            font-size: 30px;
-            font-weight: bold;
-            margin: 0 auto;
-            border-bottom: 0px;
-        }
+    <link rel="stylesheet" type="text/css" href="memoryGame.css">
 
-        .middle{
-            text-align: center;
-            line-height: 100px;
-        }
-    </style>
 </head>
 <body>
-
-
+    <div style="text-align:center;font-size: 30px;margin-bottom: 100px;margin-top: 50px;">level 1</div>
     <div class="container">
         <div class="row">
-          <div class="col">
-            <!-- 1 of 2 -->
-            <div style="margin-left:30px;margin-top:230px;">
+          <div class="col"  id="left">
+            <!-- left parts-->
+            <div style="margin-left:30px;">
                 <div >
                     <p id="1" class="grid middle"  style="display: inline-block;">？</p>
                     <p id="2" class="grid middle" style="display: inline-block;margin-left:-10px;">?</p>
@@ -53,13 +37,17 @@
                     <p id="8" class="grid middle" style="display: inline-block;margin-left: -10px;border-bottom:4px solid #8B6447;">?</p>
                     <p id="9" class="grid middle" style="display: inline-block;margin-left: -10px;border-bottom:4px solid #8B6447;">?</p>
                 </div>
-                <button onclick="nextRound()" style="margin-top:50px;">next round</button>
+                <!-- <button onclick="nextRound()" style="margin-top:50px;">next round</button> -->
         
             </div> 
           </div>
-          <div class="col">
-            2 of 2
-          </div>
+          <div class="col right" >
+            <!-- right parts-->
+            <canvas id="cv" width="300px" height="300px" style="border:1px solid #333;">
+                不支持canvas的浏览器
+            </canvas>
+            <div><button onclick="copyText(cv)">submit</button></div>
+        </div>
         </div>
       </div>
 
@@ -68,6 +56,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 <script type="text/javascript" src="game.js"></script>
+<script type="text/javascript" src="writecanvas.js"></script>
+
 
 </body>
 </html>

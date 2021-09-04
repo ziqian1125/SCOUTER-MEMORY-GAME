@@ -19,6 +19,8 @@ cv.onmousedown = function (ev) {
 }
 
 function copyText(cv){
+    var leftdiv = document.getElementById('left')
+
     var dataImg = new Image()
     dataImg.src = cv.toDataURL('image/png')
     document.body.appendChild(dataImg) 
